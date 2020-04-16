@@ -17,7 +17,7 @@ const Chat = ({ location }) => {
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
-    const endPoint = 'localhost:3000';
+    const endPoint = 'localhost:5000';
   
     // this is similar to componentDidMount and componentDidUpdate just unified into a single API.
     useEffect(() => {
@@ -32,8 +32,9 @@ const Chat = ({ location }) => {
           alert(error);
         }
       });
-      // you can pass and array of variables and use effect will only activate if the values inside change. Can accept a function too. Had no idea of this. Useful!
+      
     }, [endPoint, location.search]);
+    // you can pass and array of variables and use effect will only activate if the values inside change. Can accept a function too. Had no idea of this. Useful!
     
     useEffect(() => {
       socket.on('message', message => {
