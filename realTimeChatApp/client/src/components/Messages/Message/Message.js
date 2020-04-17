@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Message.css';
 
-import ReactEmoji from 'react-emoji';
+import ReactEmoji from '../../../../node_modules-----/react-emoji';
 
 const Message = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;

@@ -17,7 +17,7 @@ const Chat = ({ location }) => {
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
-    const endPoint = 'localhost:5000';
+    const endPoint = "https://polar-scrubland-69986.herokuapp.com/";
   
     // this is similar to componentDidMount and componentDidUpdate just unified into a single API.
     useEffect(() => {
